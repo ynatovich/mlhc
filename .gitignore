@@ -1,0 +1,13 @@
+# Files over 10mb
+DDTI/fold1_stage1_trained_on_size_256.pkl
+DDTI/fold1_stage2_trained_on_size_512.pkl
+result/TNSCUI/dpv3plus_stage1_5_1/models/epoch20_Testdice0.0000.pkl
+result/TNSCUI/dpv3plus_stage2_5_1_Time_18_08_2023__12_48_46/models/epoch20_Testdice0.0000.pkl
+result/TNSCUI/dpv3plus_stage2_5_1_Time_18_08_2023__12_48_46/models/epoch40_Testdice0.0000.pkl
+result/TNSCUI/dpv3plus_stage1_5_1_Time_18_08_2023__13_24_38/models/epoch20_Testdice0.0000.pkl
+result/TNSCUI/dpv3plus_stage1_5_1_Time_18_08_2023__13_24_38/models/epoch40_Testdice0.0000.pkl
+result/TNSCUI/*
+sample_data/DDTI.zip
+sample_data/DDTI_weight.zip
+TNSCUI/fold1_stage1_trained_on_size_256.pkl
+TNSCUI/fold1_stage2_trained_on_size_512.pkl
