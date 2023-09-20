@@ -3,8 +3,8 @@ This is a README file for our MLHC project: Advancing Thyroid Nodule Segmentatio
 The purpose of this work is to improve the segmentation of ultrasound scans of the thyroid gland. As a part of our research, we set two goals: (1) Obtaining better IoU and DSC scores and (2) using fewer training examples.
 
 **The project include this main folders and files:**
- - folder 1_or_data: 								              DDTI datasets, which is Unofficial and filtered
- - folder 2_preprocessed_data: 					          The data for training networkafter our preprocessing
+ - folder 1_or_data: 								              DDTI datasets
+ - folder 2_preprocessed_data: 					          Preprocessing of DDTI dataset (remove duplications and crop)
  - AutoSAM:										                    The official repository for AutoSAM
  - MedSAM: 										                    The official repository for MedSAM
  - step2_TrainAndValidate.py:						          The main file for training and validatation					 
@@ -65,8 +65,8 @@ python3 step2_TrainAndValidate.py --Task_name=dpv3plus_stage2_ --csv_file=./2_pr
 Where:
 ```python
 csv_file - the CSV file mentioned in the dataset 
-filepath_img - the pathfile for image dataset
-filepath_mask - the path to the masks dataset
+filepath_img - The path to the images dataset
+filepath_mask - The path to the masks dataset
 fold_idx - Complete the training of all K folds
 cuda_idx - The index of the GPU we want to use  
 aug_type - The augmentation level we want to perform easy or difficult
@@ -83,7 +83,8 @@ encoder_name - Select encoder model type
 ## Step3 testing (or inference or predicting)
 In step3, you should run the script 
 [`step3_TestOrInference.py`](https://github.com/WAMAWAMA/TNSCUI2020-Seg-Rank1st/blob/master/step2to4_train_validate_inference/step3_TestOrInference.py)
-to perform inference based on the original unprocessed imageץ
+to perform inference based on the original unprocessed image.
+Note: The location of the 2 trained models should be specified in the file with the parameter **selected**- the trained networks.
 
 # In addition, for each type of medSAM or autoSAM model we created a different file as it mentioned above-
 To perform inference on medSAM with his own generator run:
@@ -123,7 +124,7 @@ mask_path = None  # None for inference on new data
 save_path = None  # If you don't want to save the inference result, set it to None
 c1_size = 256  # The input image size for training the first network ❗
 c1_tta = False # Whether to use TTA for the first network
-orimg=False    # False for no preprocessing to remove irrelevant areas
+orimg = False    # False for no preprocessing to remove irrelevant areas
 use_c2_flag = False # Whether to use the second network
 c2_size = 512 # The input image size for training the second network ❗
 c2_tta = False # Whether to use TTA for the second network
