@@ -126,20 +126,6 @@ if __name__ == '__main__':
     task_name = r' '
 
     # cascade parameter
-    # weight_c1=r'/LAOAWNG/git/result/DDTI/Deeplabv3plus_ef6_256_cascade1_5_1/models/best_unet_score.pkl'
-    # weight_c2=r'/LAOAWNG/git/result/DDTI/Deeplabv3plus_ef6_512_cascade2_5_1/models/best_unet_score.pkl'
-    #  weight_c1=r'./DDTI/fold1_stage1_trained_on_size_256.pkl'
-    #  weight_c2=r'./DDTI/fold1_stage2_trained_on_size_512.pkl'
-    # Simple train bs=20
-    # weight_c1=r'./result/TNSCUI/dpv3plus_stage1_5_1_Time_18_08_2023__20_37_27/models/epoch400_Testdice0.0000.pkl'
-    # weight_c2=r'./result/TNSCUI/dpv3plus_stage2_5_1_Time_19_08_2023__01_20_26/models/epoch400_Testdice0.0000.pkl'
-    # Train after BPF bs=20
-    # weight_c1 = r'./result/TNSCUI/dpv3plus_stage1_5_1_Time_19_08_2023__23_48_04/models/epoch400_Testdice0.0000.pkl'
-    # weight_c2 = r'./result/TNSCUI/dpv3plus_stage2_5_1_Time_20_08_2023__08_27_45/models/epoch400_Testdice0.0000.pkl'
-    # Train after BPF + original bs=20
-    # weight_c1 = r'./result/TNSCUI/dpv3plus_stage1_5_1_Time_20_08_2023__23_49_27/models/epoch400_Testdice0.0000.pkl'
-    # weight_c2 = r'./result/TNSCUI/dpv3plus_stage2_5_1_Time_21_08_2023__07_47_51/models/epoch400_Testdice0.0000.pkl'
-
     weight_c1 = r'./result/TNSCUI/phase1_100/models/epoch400_Testdice0.0000.pkl'
 
     c1_size = 256

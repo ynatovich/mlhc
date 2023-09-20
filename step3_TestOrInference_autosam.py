@@ -126,9 +126,6 @@ if __name__ == '__main__':
     # task_name
     task_name = r' '
 
-    weight_c1 = r'./result/TNSCUI/dpv3plus_stage1_5_1_Time_04_09_2023__22_45_46/models/epoch400_Testdice0.0000.pkl'
-    weight_c2 = r'./result/TNSCUI/dpv3plus_stage2_5_1_Time_05_09_2023__00_53_28/models/epoch400_Testdice0.0000.pkl'
-
     autosam_path = r'./AutoSAM/scripts/model_best_sample_num_10.pth.tar'
     sam_path = r'./sam/sam_vit_h_4b8939.pth'
 
