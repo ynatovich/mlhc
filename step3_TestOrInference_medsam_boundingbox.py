@@ -128,6 +128,7 @@ if __name__ == '__main__':
     # cascade parameter
 
     weight_c1 = r'./result/TNSCUI/phase1_10/models/epoch400_Testdice0.0000.pkl'
+    medsam_path = './MedSAM/work_dir/MedSAM/medsam_vit_b.pth'
 
     c1_size = 256
     c1_tta = False
@@ -171,7 +172,7 @@ if __name__ == '__main__':
             model_cascade1 = tta.SegmentationTTAWrapper(model_cascade1, tta_trans, merge_mode='mean')
         model_cascade1.eval()
 
-        medsam_model = sam_model_registry["vit_b"](checkpoint='./MedSAM/work_dir/MedSAM/medsam_vit_b.pth')
+        medsam_model = sam_model_registry["vit_b"](checkpoint=medsam_path)
         medsam_model.cuda()
         sam_predictor = SamPredictor(medsam_model)
         sam_mask_generator = SamAutomaticMaskGenerator(medsam_model,output_mode='binary_mask')

@@ -106,6 +106,11 @@ To perform inference on medSAM with bounding box run:
 python3 step3_TestOrInference_medsam_boundingbox.py
 ```
 
+To perform fine-tune of autoSAM run:
+```python
+python3 AutoSAM/scripts/main_autosam_seg.py
+```
+
 To perform inference on autoSAM (after finetune) run:
 ```python
 python3 step3_TestOrInference_autosam.py
@@ -122,4 +127,6 @@ orimg=False    # False for no preprocessing to remove irrelevant areas
 use_c2_flag = False # Whether to use the second network
 c2_size = 512 # The input image size for training the second network ❗
 c2_tta = False # Whether to use TTA for the second network
+autosam_path = r'./AutoSAM/scripts/model_best_sample.pth.tar' # The path of the trained model of AutoSAM
+medsam_path = './MedSAM/work_dir/MedSAM/medsam_vit_b.pth' # The path of the trained model of MedSAM
 ```
